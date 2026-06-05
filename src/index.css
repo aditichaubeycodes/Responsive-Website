@@ -1,0 +1,32 @@
+/* Google Fonts se Manrope font import kiya gaya hai */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+/* Tailwind CSS v4 ko project me import karne ke liye */
+@import "tailwindcss";
+
+/* 
+   Custom dark mode variant banaya gaya hai.
+   Jab kisi parent element par .dark class hogi,
+   tab dark: prefix wali Tailwind classes apply hongi.
+*/
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 
+   Custom theme variables define karne ke liye.
+   Ye color Tailwind utility classes me use kiya ja sakta hai.
+*/
+@theme {
+  /* Primary brand color */
+  --color-primary: #5044E5;
+}
+
+/* 
+   Puri website par Manrope font apply karne ke liye.
+   Sabhi elements (*) par ye style lagega.
+*/
+* {
+  font-family: "Manrope", sans-serif;
+
+  /* Default font weight medium (500) rakha gaya hai */
+  font-weight: 500;
+}
